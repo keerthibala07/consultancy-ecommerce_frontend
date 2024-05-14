@@ -6,10 +6,9 @@ const Offers = () => {
   return (
     <div className="offers">
       <div className="offers-left">
-        <h1>Exclusive</h1>
-        <h1>Offers For You</h1>
-        <p>ONLY ON BEST SELLERS PRODUCTS</p>
-        <button>Check now</button>
+        <h1>Step into Style</h1>
+        <p>Discover Your Signature Look with Our Fashion Essentials</p>
+        
       </div>
       <div className="offers-right">
         <img src={exclusive_image} alt="" />

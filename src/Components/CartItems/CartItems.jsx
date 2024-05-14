@@ -26,9 +26,9 @@ const CartItems = () => {
                     <div className="cartitems-format-main cartitems-format">
                       <img className="cartitems-product-icon" src={e.image} alt="" />
                       <p cartitems-product-title>{e.name}</p>
-                      <p>${e.new_price}</p>
+                      <p>Rs.{e.new_price}</p>
                       <button className="cartitems-quantity">{cartItems[e.id]}</button>
-                      <p>${e.new_price*cartItems[e.id]}</p>
+                      <p>Rs.{e.new_price*cartItems[e.id]}</p>
                       <img onClick={()=>{removeFromCart(e.id)}} className="cartitems-remove-icon" src={cross_icon} alt="" />
                     </div>
                      <hr />
@@ -43,26 +43,29 @@ const CartItems = () => {
           <div>
             <div className="cartitems-total-item">
               <p>Subtotal</p>
-              <p>${getTotalCartAmount()}</p>
+              <p>Rs.{getTotalCartAmount()}</p>
             </div>
             <hr />
             <div className="cartitems-total-item">
-              <p>Shipping Fee</p>
-              <p>Free</p>
+              <p>GST</p>
+              <p>Rs.0</p>
             </div>
             <hr />
             <div className="cartitems-total-item">
               <h3>Total</h3>
-              <h3>${getTotalCartAmount()}</h3>
+              <h3>Rs.{getTotalCartAmount()}</h3>
             </div>
           </div>
-          <button>PROCEED TO CHECKOUT</button>
+          <button>Get offer by using promocode!!</button>
         </div>
         <div className="cartitems-promocode">
-          <p>If you have a promo code, Enter it here</p>
+          <p>Use the promo code while purchasing</p>
           <div className="cartitems-promobox">
-            <input type="text" placeholder="promo code" />
-            <button>Submit</button>
+            <p>
+               promo code 
+            </p>
+            {/* <input type="text" placeholder="promo code : 7643" /> */}
+            {/* <button>Submit</button> */}
           </div>
         </div>
       </div>
